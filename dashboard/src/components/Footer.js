@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <Box 
       sx={{
-        width: '100%',  // Ensure the footer spans the entire width
+        width: '100%',
         display: 'flex', 
         justifyContent: 'center', 
         alignItems: 'center', 

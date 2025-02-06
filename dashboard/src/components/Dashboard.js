@@ -3,14 +3,14 @@
 import React, { useState, useEffect } from 'react';
 import ListingCard from './ListingCard'; 
 import { Select, MenuItem, Box, Container, InputLabel, FormControl, Typography, Checkbox, ListItemText, Slider, Button } from '@mui/material';
-import Footer from './Footer'; // Import Footer component
+import Footer from './Footer';
 
 const Dashboard = ({ items = [] }) => {
   const [filters, setFilters] = useState({
     districts: [],
     rooms: [],
     rents: [],
-    sqm: [0, 100], // Default range for square meters
+    sqm: [0, 100],
     floorLevels: [],
   });
 
@@ -18,9 +18,9 @@ const Dashboard = ({ items = [] }) => {
 
   // Extract unique values for districts, rooms, rents, floor levels from the data
   const districts = [...new Set(items.map(item => item.district))].sort(); // Sort districts alphabetically
-  const rooms = [...new Set(items.map(item => item.rooms))].sort((a, b) => a - b); // Sort rooms numerically (ascending)
+  const rooms = [...new Set(items.map(item => item.rooms))].sort((a, b) => a - b); // Sort rooms numerically
   
-  // Price ranges definition
+  // Price ranges
   const priceRanges = [
     { label: "Unter 1000€", value: [0, 1000] },
     { label: "1000€ - 2000€", value: [1000, 2000] },
@@ -33,7 +33,7 @@ const Dashboard = ({ items = [] }) => {
   const floorLevels = [...new Set(items.map(item => item.floor_level))].sort(); // Sort floor levels alphabetically
 
   useEffect(() => {
-    // Apply filters based on selected options
+    // Apply filters
     const filterListings = () => {
       const result = items.filter((listing) => {
         const matchesDistrict =
@@ -78,7 +78,7 @@ const Dashboard = ({ items = [] }) => {
     }));
   };
 
-  // Reset all filters to initial values
+  // Reset filters
   const resetFilters = () => {
     setFilters({
       districts: [],

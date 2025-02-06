@@ -6,10 +6,10 @@ const ListingCard = ({ item }) => {
     <Card sx={{
       display: 'flex',
       borderRadius: 2,
-      boxShadow: 0, // Remove shadow
+      boxShadow: 0,
       margin: 2,
       padding: 2,
-      alignItems: 'center' // Vertically align the content
+      alignItems: 'center'
     }}>
       {/* Image Section with Fallback Message */}
       <Box
