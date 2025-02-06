@@ -113,6 +113,22 @@
     },
     {
         "listing_title": "Wohnung zur Miete",
+        "monthly_rent": 2049,
+        "location": "Goethestraße 30, Ludwigsvorstadt-Kliniken, München (80336)",
+        "district": "Ludwigsvorstadt-Kliniken",
+        "city": "München",
+        "plz": 80336,
+        "listing_details": "3 Zimmer·88,7 m²·2. Geschoss",
+        "rooms": 3.0,
+        "sqm": 88.7,
+        "floor_level": "2. Geschoss",
+        "available_from": "Nicht angegeben",
+        "sqm_price": 23.1,
+        "image": "https://mms.immowelt.de/f/7/f/4/f7f49745-0ef1-475b-a569-5b3d8584fc0a.png?ci_seal=eec7715b6c4340e6c9348b3e533fa49364a8cc84&w=384",
+        "agency": "Smart Property Management GmbH"
+    },
+    {
+        "listing_title": "Wohnung zur Miete",
         "monthly_rent": 1480,
         "location": "Berg am Laim Ost, München (81671)",
         "district": "Berg am Laim Ost",
@@ -190,22 +206,6 @@
         "sqm_price": 31.3,
         "image": "Keine Fotos vorhanden",
         "agency": "Kabis Immobilien"
-    },
-    {
-        "listing_title": "Wohnung zur Miete",
-        "monthly_rent": 2035,
-        "location": "Rosa-Kempf-Straße 11, Freiham, München (81249)",
-        "district": "Freiham",
-        "city": "München",
-        "plz": 81249,
-        "listing_details": "3 Zimmer·87,9 m²·3. Geschoss·frei ab sofort",
-        "rooms": 3.0,
-        "sqm": 87.9,
-        "floor_level": "3. Geschoss",
-        "available_from": "Nicht angegeben",
-        "sqm_price": 23.15,
-        "image": "Keine Fotos vorhanden",
-        "agency": "Munich Future City West GmbH"
     },
     {
         "listing_title": "Terrassenwohnung zur Miete",
