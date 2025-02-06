@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ListingCard from './ListingCard';
-import data from '../data/data.json';
 
-function Dashboard() {
-  const [listings, setListings] = useState([]);
-
-  useEffect(() => {
-    setListings(data); // Load the data from the JSON file
-  }, []);
-
+const Dashboard = ({ items }) => {
   return (
     <div className="dashboard">
-      {listings.map((listing) => (
-        <ListingCard key={listing.plz} listing={listing} />
-      ))}
+      <h1>Welcome to the Dashboard</h1>
+      <div className="listing-container">
+        {items.length > 0 ? (
+          items.map((item, index) => (
+            <ListingCard key={index} item={item} />
+          ))
+        ) : (
+          <p>No items available</p>
+        )}
+      </div>
     </div>
   );
-}
+};
 
 export default Dashboard;
