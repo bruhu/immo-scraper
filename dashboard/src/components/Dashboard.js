@@ -1,17 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import ListingCard from './ListingCard'; 
-import { Select, MenuItem, Box, Container, InputLabel, FormControl, Typography, Checkbox, ListItemText } from '@mui/material';
+import { Select, MenuItem, Box, Container, InputLabel, FormControl, Typography, Checkbox, ListItemText, Slider, Button } from '@mui/material';
 
 const Dashboard = ({ items = [] }) => {
   const [filters, setFilters] = useState({
     districts: [],
     rooms: [],
     rents: [],
+    sqm: [0, 100], // Default range for square meters
+    floorLevels: [],
   });
 
   const [filteredListings, setFilteredListings] = useState(items);
 
-  // Extract unique values for districts, rooms, and rents from the data
+  // Extract unique values for districts, rooms, rents, floor levels from the data
   const districts = [...new Set(items.map(item => item.district))].sort(); // Sort districts alphabetically
   const rooms = [...new Set(items.map(item => item.rooms))].sort((a, b) => a - b); // Sort rooms numerically (ascending)
   
@@ -24,6 +26,8 @@ const Dashboard = ({ items = [] }) => {
     { label: "4000€ - 5000€", value: [4000, 5000] },
     { label: "Über 5000€", value: [5000, Infinity] },
   ];
+
+  const floorLevels = [...new Set(items.map(item => item.floor_level))].sort(); // Sort floor levels alphabetically
 
   useEffect(() => {
     // Apply filters based on selected options
@@ -41,7 +45,13 @@ const Dashboard = ({ items = [] }) => {
             return listing.monthly_rent >= min && listing.monthly_rent <= max;
           });
 
-        return matchesDistrict && matchesRooms && matchesRent;
+        const matchesSize =
+          listing.sqm >= filters.sqm[0] && listing.sqm <= filters.sqm[1];
+
+        const matchesFloorLevel =
+          filters.floorLevels.length === 0 || filters.floorLevels.includes(listing.floor_level);
+
+        return matchesDistrict && matchesRooms && matchesRent && matchesSize && matchesFloorLevel;
       });
       setFilteredListings(result);
     };
@@ -57,84 +67,153 @@ const Dashboard = ({ items = [] }) => {
     }));
   };
 
+  // Handle the size (sqm) filter range change
+  const handleSizeChange = (event, newValue) => {
+    setFilters((prevFilters) => ({
+      ...prevFilters,
+      sqm: newValue,
+    }));
+  };
+
+  // Reset all filters to initial values
+  const resetFilters = () => {
+    setFilters({
+      districts: [],
+      rooms: [],
+      rents: [],
+      sqm: [0, 100],
+      floorLevels: [],
+    });
+  };
+
   return (
     <Container>
-      <Box sx={{ marginBottom: 4 }}>
-        <Typography variant="h5" gutterBottom>
-          Filter nach
-        </Typography>
-        <Box sx={{ display: 'flex', gap: 2, flexWrap: 'wrap' }}>
-          {/* District Filter */}
-          <FormControl fullWidth>
-            <InputLabel>Viertel</InputLabel>
-            <Select
-              name="districts"
-              value={filters.districts}
-              onChange={handleFilterChange}
-              label="District"
-              multiple
-            >
-              {districts.map((district) => (
-                <MenuItem key={district} value={district}>
-                  <Checkbox checked={filters.districts.includes(district)} />
-                  <ListItemText primary={district} />
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+      <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 4 }}>
+        {/* Filters Section (Left side) */}
+        <Box sx={{ flex: 1, minWidth: '250px' }}>
+          <Typography variant="h5" gutterBottom>
+            Filter nach
+          </Typography>
+          <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+            {/* District Filter */}
+            <FormControl fullWidth>
+              <InputLabel>Viertel</InputLabel>
+              <Select
+                name="districts"
+                value={filters.districts}
+                onChange={handleFilterChange}
+                label="District"
+                multiple
+              >
+                {districts.map((district) => (
+                  <MenuItem key={district} value={district}>
+                    <Checkbox checked={filters.districts.includes(district)} />
+                    <ListItemText primary={district} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
 
-          {/* Rooms Filter */}
-          <FormControl fullWidth>
-            <InputLabel>Zimmer</InputLabel>
-            <Select
-              name="rooms"
-              value={filters.rooms}
-              onChange={handleFilterChange}
-              label="Rooms"
-              multiple
-            >
-              {rooms.map((room) => (
-                <MenuItem key={room} value={room}>
-                  <Checkbox checked={filters.rooms.includes(room)} />
-                  <ListItemText primary={room} />
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
+            {/* Rooms Filter */}
+            <FormControl fullWidth>
+              <InputLabel>Zimmer</InputLabel>
+              <Select
+                name="rooms"
+                value={filters.rooms}
+                onChange={handleFilterChange}
+                label="Rooms"
+                multiple
+              >
+                {rooms.map((room) => (
+                  <MenuItem key={room} value={room}>
+                    <Checkbox checked={filters.rooms.includes(room)} />
+                    <ListItemText primary={room} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
 
-          {/* Rent Filter (Price Ranges) */}
-          <FormControl fullWidth>
-            <InputLabel>Miete</InputLabel>
-            <Select
-              name="rents"
-              value={filters.rents}
-              onChange={handleFilterChange}
-              label="Rent"
-              multiple
-            >
-              {priceRanges.map((range) => (
-                <MenuItem key={range.label} value={range.value}>
-                  <Checkbox checked={filters.rents.some(rentRange => 
-                    rentRange[0] === range.value[0] && rentRange[1] === range.value[1]
-                  )} />
-                  <ListItemText primary={range.label} />
-                </MenuItem>
-              ))}
-            </Select>
-          </FormControl>
-        </Box>
-      </Box>
+            {/* Rent Filter (Price Ranges) */}
+            <FormControl fullWidth>
+              <InputLabel>Miete</InputLabel>
+              <Select
+                name="rents"
+                value={filters.rents}
+                onChange={handleFilterChange}
+                label="Rent"
+                multiple
+              >
+                {priceRanges.map((range) => (
+                  <MenuItem key={range.label} value={range.value}>
+                    <Checkbox checked={filters.rents.some(rentRange => 
+                      rentRange[0] === range.value[0] && rentRange[1] === range.value[1]
+                    )} />
+                    <ListItemText primary={range.label} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
 
-      <Box sx={{ display: 'flex', flexDirection: 'column' }}> {/* Display in a single column */}
-        {filteredListings.length > 0 ? (
-          filteredListings.map((listing) => (
-            <Box key={listing.id} sx={{ marginBottom: 2 }}> {/* Cards in one column */}
-              <ListingCard item={listing} />
+            {/* Size (sqm) Filter */}
+            <Box sx={{ width: '100%' }}>
+              <Typography variant="body1" gutterBottom>
+                Größe (qm): {filters.sqm[0]} - {filters.sqm[1]}
+              </Typography>
+              <Slider
+                value={filters.sqm}
+                onChange={handleSizeChange}
+                valueLabelDisplay="auto"
+                valueLabelFormat={(value) => `${value} qm`}
+                min={0}
+                max={500}
+                step={10}
+              />
             </Box>
-          ))
-        ) : (
-          <Typography>No listings match the selected filters.</Typography>
-        )}
+
+            {/* Floor Level Filter */}
+            <FormControl fullWidth>
+              <InputLabel>Stockwerk</InputLabel>
+              <Select
+                name="floorLevels"
+                value={filters.floorLevels}
+                onChange={handleFilterChange}
+                label="Floor Level"
+                multiple
+              >
+                {floorLevels.map((level) => (
+                  <MenuItem key={level} value={level}>
+                    <Checkbox checked={filters.floorLevels.includes(level)} />
+                    <ListItemText primary={level} />
+                  </MenuItem>
+                ))}
+              </Select>
+            </FormControl>
+
+            {/* Reset Button */}
+            <Button 
+              variant="outlined" 
+              onClick={resetFilters} 
+              sx={{ marginTop: 2 }}
+            >
+              Filters zurücksetzen
+            </Button>
+          </Box>
+        </Box>
+
+        {/* Listings Section (Right side) */}
+        <Box sx={{ flex: 3 }}>
+          <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+            {filteredListings.length > 0 ? (
+              filteredListings.map((listing) => (
+                <Box key={listing.id} sx={{ marginBottom: 2 }}>
+                  <ListingCard item={listing} />
+                </Box>
+              ))
+            ) : (
+              <Typography>No listings match the selected filters.</Typography>
+            )}
+          </Box>
+        </Box>
       </Box>
     </Container>
   );
