@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import json
 import re
 from datetime import datetime, date
-import math
 
 # URL to scrape
 URL = "https://www.immowelt.de/liste/muenchen/wohnungen/mieten"
@@ -60,6 +59,39 @@ def date_converter(obj):
         return obj.strftime("%d.%m.%Y")
     raise TypeError("Type not serializable")
 
+# Function to parse the location into district, city, and postal code (PLZ)
+def parse_location(location):
+    # Try matching with the full format that includes the street address, district, city, and postal code
+    match = re.match(r"([A-Za-zÄÖÜäöüß\s\-]+(?:\s*\d+)?),\s*([^,]+),\s*(\w+)\s*\((\d{5})\)", location)
+    
+    # If the full format matches, extract the street, district, city, and postal code
+    if match:
+        street_and_number = match.group(1)  # Can be something like "Rosa-Kempf-Straße 11"
+        district = match.group(2)  # "Freiham" or "Neuschwabing"
+        city = match.group(3)  # "München"
+        plz = int(match.group(4))  # Postal code as integer (e.g., 81249)
+
+        return district, city, plz
+
+    # If no full format match, attempt a simpler case that just extracts district and postal code
+    match_simple = re.match(r"([A-Za-zÄÖÜäöüß\s\-]+),\s*(\w+)\s*\((\d{5})\)", location)
+    if match_simple:
+        district = match_simple.group(1)
+        city = match_simple.group(2)
+        plz = int(match_simple.group(3))  # Postal code as integer (e.g., 81375)
+        return district, city, plz
+    
+    # If the format is still not matched, check just for the presence of parentheses and extract the postal code
+    plz_match = re.search(r"\((\d{5})\)", location)
+    if plz_match:
+        # Extract PLZ from parentheses
+        plz = int(plz_match.group(1))
+        return "Nicht angegeben", "München", plz
+
+    # If no postal code is found, return defaults
+    return "Nicht angegeben", "München", None
+
+
 
 # scrape data
 def scrape_immo():
@@ -74,7 +106,7 @@ def scrape_immo():
         listing_details = item.select_one(".css-a5vdp8").text.strip() if item.select_one(".css-a5vdp8") else "Keine listing_details vorhanden"
         image_element = item.select_one(".css-1is1d0o img")  # select <img> inside div
         image = image_element['src'] if image_element and image_element.has_attr('src') else "Keine Fotos vorhanden"
-        agency = item.select_one(".css-ypaw2y").text.strip() if item.select_one(".css-ypaw2y") else ""
+        agency = item.select_one(".css-ypaw2y").text.strip() if item.select_one(".css-ypaw2y") else "Nicht angegeben"
 
         # Parse the listing_details string to extract rooms, area, floor_level, and available_from
         rooms, area, floor_level, available_from = parse_listing_details(listing_details)
@@ -82,27 +114,33 @@ def scrape_immo():
         # Extract rent from the monthly_rent string
         rent = extract_rent(monthly_rent)
 
-        # Convert rooms and area to floats and round them to two decimal places
+        # Convert rooms and area to floats
         rooms = float(rooms) if rooms != "Nicht angegeben" else 0.0
-        area = round(float(area.replace(",", ".")) if area != "Nicht angegeben" else 0.0, 2)
+        area = float(area.replace(",", ".")) if area != "Nicht angegeben" else 0.0
 
         # Parse available_from to datetime if it exists
         available_from = parse_available_from(available_from)
 
-        # Calculate rent per sqm
-        sqm_price = round(rent / area, 2) if area != 0 else 0.0  # Avoid division by 0 if area is "Nicht angegeben"
+        # Parse location into district, city, and PLZ
+        district, city, plz = parse_location(location)
 
-        # Append the listing info with the parsed listing_details
+        # Calculate sqm_price
+        sqm_price = round(rent / area, 2) if area > 0 else 0.0
+
+        # Append the listing info with the parsed details
         listings.append({
             "listing_title": listing_title,
             "monthly_rent": rent,
             "location": location,
+            "district": district,
+            "city": city,
+            "plz": plz,
             "listing_details": listing_details,
             "rooms": rooms,
-            "sqm": area,
+            "sqm": round(area, 2),  # Round sqm to 2 decimals
             "floor_level": floor_level,
             "available_from": available_from,
-            "sqm_price": sqm_price,  # Add rent per sqm
+            "sqm_price": sqm_price,
             "image": image,
             "agency": agency
         })
