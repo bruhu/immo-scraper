@@ -1,5 +1,5 @@
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup # type: ignore
 import json
 import re
 from datetime import datetime, date
@@ -134,7 +134,7 @@ def scrape_immo():
 
 # Save data as JSON
 data = scrape_immo()
-with open("immo-scraper/data.json", "w", encoding="utf-8") as f:
+with open("data.json", "w", encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False, indent=4, default=date_converter)
 
 print("Scraping ist fertig! Daten in data.json gespeichert")

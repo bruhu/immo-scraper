@@ -1,0 +1,14 @@
+/* ListingCard.css */
+.listing-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .listing-card {
+    margin: 10px;
+    width: 100%;
+    max-width: 800px; /* Adjust based on your desired card width */
+  }
+  
