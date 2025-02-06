@@ -50,19 +50,25 @@ const ListingCard = ({ item }) => {
             {item.listing_title}
           </Typography>
           <Typography variant="body2" color="text.secondary" sx={{ marginBottom: 1 }}>
-            {item.listing_details}
+          Verfügbar ab: {item.available_from}
           </Typography>
-          <Typography variant="body2" color="text.primary">
-            <strong>Monthly Rent:</strong> €{item.monthly_rent}
+          <Typography variant="body2" color="text.primary" sx={{ marginBottom: 1 }}>
+            <strong>Miete:</strong> {item.monthly_rent}€
           </Typography>
-          <Typography variant="body2" color="text.primary">
-            <strong>Location:</strong> {item.location}
+          <Typography variant="body2" color="text.primary" sx={{ marginBottom: 1 }}>
+            <strong>Stadt:</strong> {item.plz} {item.city}
           </Typography>
-          <Typography variant="body2" color="text.primary">
-            <strong>Size:</strong> {item.sqm} m²
+          <Typography variant="body2" color="text.primary" sx={{ marginBottom: 1 }}>
+            <strong>Viertel:</strong> {item.district}
           </Typography>
-          <Typography variant="body2" color="text.primary">
-            <strong>Rooms:</strong> {item.rooms}
+          <Typography variant="body2" color="text.primary" sx={{ marginBottom: 1 }}>
+            <strong>Größe:</strong> {item.sqm} qm
+          </Typography>
+          <Typography variant="body2" color="text.primary" sx={{ marginBottom: 1 }}>
+            <strong>Zimmer:</strong> {item.rooms}
+          </Typography>
+          <Typography variant="body2" color="text.primary" sx={{ marginBottom: 1 }}>
+            <strong>Miete/qm:</strong> {item.sqm_price}€
           </Typography>
         </CardContent>
       </Box>
