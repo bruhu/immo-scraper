@@ -17,7 +17,7 @@ const Footer = () => {
       }}
     >
       <Typography variant="body2" color="textSecondary" sx={{ textAlign: 'center' }}>
-        Ein Code Challenge für BizFactory, Februar 2025.
+        Eine Code Challenge für BizFactory, Februar 2025.
         <Link href="https://github.com/bruhu/immo-scraper/" target="_blank" sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
           GitHub Repository
         </Link>
