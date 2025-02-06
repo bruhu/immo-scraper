@@ -17,10 +17,17 @@ def scrape_immo():
         price = item.select_one(".css-1luyivc").text.strip() if item.select_one(".css-1luyivc") else "Kein Preis vorhanden"
         location = item.select_one(".css-4udngo").text.strip() if item.select_one(".css-4udngo") else "Kein Standort vorhanden"
         details = item.select_one(".css-a5vdp8").text.strip() if item.select_one(".css-a5vdp8") else "Keine Details vorhanden"
-        image = item.select_one(".css-3st7bv").text.strip() if item.select_one(".css-3st7bv") else "Keine Fotos vorhanden"
-        
+        image_element = item.select_one(".css-1is1d0o img")  # select <img> inside div
+        image = image_element['src'] if image_element and image_element.has_attr('src') else "Keine Fotos vorhanden"
 
-        listings.append({"title": title, "price": price, "location": location, "details": details, "image": image})
+        # append listing info
+        listings.append({
+            "title": title,
+            "price": price,
+            "location": location,
+            "details": details,
+            "image": image
+        })
 
     return listings
 
