@@ -18,7 +18,7 @@ const Footer = () => {
     >
       <Typography variant="body2" color="textSecondary">
         Ein Code Challenge für BizFactory, Februar 2025 |{" "}
-        <Link href="https://github.com/bruhu" target="_blank" sx={{ display: 'flex', alignItems: 'center' }}>
+        <Link href="https://github.com/bruhu/immo-scraper/" target="_blank" sx={{ display: 'flex', alignItems: 'center' }}>
           GitHub Repo
         </Link>
       </Typography>

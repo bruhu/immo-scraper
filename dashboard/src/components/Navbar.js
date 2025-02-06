@@ -3,7 +3,7 @@ import { AppBar, Toolbar, Typography, Box } from '@mui/material';
 
 const Navbar = () => {
   return (
-    <AppBar position="sticky" sx={{ boxShadow: 'none', backgroundColor: '#1976d2' }}>
+    <AppBar position="sticky" sx={{ boxShadow: 'none', backgroundColor: '#0081a7' }}>
       <Toolbar sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', padding: '12px 16px' }}>
         {/* Main Title */}
         <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: 'white' }}>
