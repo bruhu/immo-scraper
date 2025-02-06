@@ -87,7 +87,7 @@ const Dashboard = ({ items = [] }) => {
   };
 
   return (
-    <Container>
+    <Container sx={{ paddingTop: '40px' }}> {/* Added paddingTop here to provide more space above */}
       <Box sx={{ display: 'flex', justifyContent: 'space-between', gap: 4 }}>
         {/* Filters Section (Left side) */}
         <Box sx={{ flex: 1, minWidth: '250px' }}>
