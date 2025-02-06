@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import ListingCard from './ListingCard'; 
 import { Select, MenuItem, Box, Container, InputLabel, FormControl, Typography, Checkbox, ListItemText, Slider, Button } from '@mui/material';
-import Footer from './Footer';
 
 const Dashboard = ({ items = [] }) => {
   const [filters, setFilters] = useState({
@@ -214,15 +213,12 @@ const Dashboard = ({ items = [] }) => {
                   </Box>
                 ))
               ) : (
-                <Typography>No listings match the selected filters.</Typography>
+                <Typography>Keine Inserate gefunden.</Typography>
               )}
             </Box>
           </Box>
         </Box>
       </Container>
-
-      {/* Footer Section */}
-      <Footer /> {/* Add Footer component */}
     </Box>
   );
 };

@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from 'react';
-import Dashboard from './components/Dashboard'; // Assuming you already have the path correct
+import Dashboard from './components/Dashboard';
 import Navbar from './components/Navbar';
-import data from './data/data.json'; // Import the JSON file directly
+import Footer from './components/Footer';
+import data from './data/data.json';
 
 function App() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Load the data from the JSON file on initial render
-    setItems(data); // Assuming data is an array of objects
+    setItems(data);
   }, []);
 
   return (
     <div className="App">
-      <Navbar />
-      <Dashboard items={items} />
+      <div className="content-wrapper">  {/* Wrapper for dynamic content */}
+        <Navbar />
+        <Dashboard items={items} />
+      </div>
+      <Footer />
     </div>
   );
 }
