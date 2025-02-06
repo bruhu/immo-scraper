@@ -9,8 +9,9 @@ const Navbar = () => {
         <Typography variant="h4" component="div" sx={{ fontWeight: 'bold', color: 'white' }}>
           Immo Scraper
         </Typography>
+        
         {/* Subtitle */}
-        <Typography variant="h6" sx={{ color: 'rgba(255, 255, 255, 0.7)', marginTop: 0 }}>
+        <Typography variant="h6" sx={{ color: 'rgba(255, 255, 255, 0.7)', marginTop: 1 }}>
           Probetag Challenge Front/Backend
         </Typography>
       </Toolbar>

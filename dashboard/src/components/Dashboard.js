@@ -1,5 +1,3 @@
-// src/components/Dashboard.js
-
 import React, { useState, useEffect } from 'react';
 import ListingCard from './ListingCard'; 
 import { Select, MenuItem, Box, Container, InputLabel, FormControl, Typography, Checkbox, ListItemText, Slider, Button } from '@mui/material';
@@ -213,7 +211,19 @@ const Dashboard = ({ items = [] }) => {
                   </Box>
                 ))
               ) : (
-                <Typography>Keine Inserate gefunden.</Typography>
+                <Box 
+                  sx={{
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    height: '60vh',  // Adjusted height to 60% of the viewport height
+                    textAlign: 'center',
+                  }}
+                >
+                  <Typography variant="h6" color="textSecondary">
+                    Keine Inserate gefunden.
+                  </Typography>
+                </Box>
               )}
             </Box>
           </Box>
