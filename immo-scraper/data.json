@@ -4,209 +4,239 @@
         "price": "1.090 € Kaltmiete zzgl. NK",
         "location": "Sendlinger Feld, München (81371)",
         "details": "2 Zimmer·63 m²·3. Geschoss",
-        "image": "https://mms.immowelt.de/7/0/a/8/70a8547c-7d10-4228-8eab-dc5b3c1c68f8.jpg?ci_seal=75418b885ac0c134493af38192d15421015a2e76&w=384"
+        "image": "https://mms.immowelt.de/7/0/a/8/70a8547c-7d10-4228-8eab-dc5b3c1c68f8.jpg?ci_seal=75418b885ac0c134493af38192d15421015a2e76&w=384",
+        "agency": "HKI Haus & Grund Immobilien GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.139 € Kaltmiete zzgl. NK",
         "location": "Amalie-Nacken-Str. 10, Obermenzing, München (81249)",
         "details": "4 Zimmer·95,2 m²·4. Geschoss·frei ab 01.05.2025",
-        "image": "https://mms.immowelt.de/e/6/8/1/e6818048-e99e-4367-9b8b-4bd933991ab4.jpg?ci_seal=fbb43d169d6f919c2f7029307848f05e4ed36095&w=384"
+        "image": "https://mms.immowelt.de/e/6/8/1/e6818048-e99e-4367-9b8b-4bd933991ab4.jpg?ci_seal=fbb43d169d6f919c2f7029307848f05e4ed36095&w=384",
+        "agency": "Vonovia Kundenservice GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.152 € Kaltmiete zzgl. NK",
         "location": "Daglfing, München (81929)",
         "details": "3 Zimmer·83 m²·frei ab 17.03.2025",
-        "image": "https://mms.immowelt.de/c/4/b/4/c4b45987-8a84-483b-9f76-bc3cfa068bf9.jpg?ci_seal=4cfe23b3b04f3c5d1c4e1325af33e71a5ed7213f&w=384"
+        "image": "https://mms.immowelt.de/c/4/b/4/c4b45987-8a84-483b-9f76-bc3cfa068bf9.jpg?ci_seal=4cfe23b3b04f3c5d1c4e1325af33e71a5ed7213f&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.850 € /Monat Warmmiete",
         "location": "Thalkirchen, München (81379)",
         "details": "2 Zimmer·57 m²·frei ab 10.02.2025",
-        "image": "https://mms.immowelt.de/a/2/2/2/a2223fc4-406a-4b83-96ce-841fb2e698f8.jpg?ci_seal=0228e78b6c4d92504ddeee94c1817f2c6434327a&w=384"
+        "image": "https://mms.immowelt.de/a/2/2/2/a2223fc4-406a-4b83-96ce-841fb2e698f8.jpg?ci_seal=0228e78b6c4d92504ddeee94c1817f2c6434327a&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "4.720 € Kaltmiete zzgl. NK",
         "location": "Neuschwabing, München (80796)",
         "details": "4 Zimmer·185 m²",
-        "image": "https://mms.immowelt.de/1/9/b/d/19bd67b4-5274-486d-a923-4a7191176848.jpg?ci_seal=4c0a19131585239da271a43527781840cbda42fc&w=384"
+        "image": "https://mms.immowelt.de/1/9/b/d/19bd67b4-5274-486d-a923-4a7191176848.jpg?ci_seal=4c0a19131585239da271a43527781840cbda42fc&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "5.900 € /Monat Warmmiete",
         "location": "Neuschwabing, München (80796)",
         "details": "4 Zimmer·185 m²",
-        "image": "https://mms.immowelt.de/6/6/8/8/66880327-fe4a-440a-bd85-d84e3ea6cd94.jpg?ci_seal=25329c47e0489149b814df2bec51d29810d8a680&w=384"
+        "image": "https://mms.immowelt.de/6/6/8/8/66880327-fe4a-440a-bd85-d84e3ea6cd94.jpg?ci_seal=25329c47e0489149b814df2bec51d29810d8a680&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.650 € /Monat Warmmiete",
         "location": "Mittersendling, München (81373)",
         "details": "1 Zimmer·42 m²·frei ab 01.06.2025",
-        "image": "https://mms.immowelt.de/b/d/5/1/bd519dfe-409f-4bb8-8d77-2da38a6298f7.jpg?ci_seal=aa64608fb93a4753267c1eb1cd3d851fd44629a8&w=384"
+        "image": "https://mms.immowelt.de/b/d/5/1/bd519dfe-409f-4bb8-8d77-2da38a6298f7.jpg?ci_seal=aa64608fb93a4753267c1eb1cd3d851fd44629a8&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.049 € Kaltmiete zzgl. NK",
         "location": "Goethestraße 30, Ludwigsvorstadt-Kliniken, München (80336)",
         "details": "3 Zimmer·88,7 m²·2. Geschoss",
-        "image": "https://mms.immowelt.de/f/7/f/4/f7f49745-0ef1-475b-a569-5b3d8584fc0a.png?ci_seal=eec7715b6c4340e6c9348b3e533fa49364a8cc84&w=384"
+        "image": "https://mms.immowelt.de/f/7/f/4/f7f49745-0ef1-475b-a569-5b3d8584fc0a.png?ci_seal=eec7715b6c4340e6c9348b3e533fa49364a8cc84&w=384",
+        "agency": "Smart Property Management GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.480 € Kaltmiete zzgl. NK",
         "location": "Berg am Laim Ost, München (81671)",
         "details": "2 Zimmer·60 m²·frei ab 01.03.2025",
-        "image": "https://mms.immowelt.de/b/6/9/7/b697443b-18e9-4487-adc1-f6b7a3f3635a.jpg?ci_seal=50af60206d32fa192f21170fab7abe35cf76a33a&w=384"
+        "image": "https://mms.immowelt.de/b/6/9/7/b697443b-18e9-4487-adc1-f6b7a3f3635a.jpg?ci_seal=50af60206d32fa192f21170fab7abe35cf76a33a&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.464 € Kaltmiete zzgl. NK",
         "location": "Untere Au, München (81541)",
         "details": "1 Zimmer·39 m²·frei ab 17.02.2025",
-        "image": "https://mms.immowelt.de/a/a/a/e/aaae3503-8133-4048-b83c-d76550c2848c.jpg?ci_seal=e6c5116ff8ad1cf5dfe8b36aceed03217aa0cda5&w=384"
+        "image": "https://mms.immowelt.de/a/a/a/e/aaae3503-8133-4048-b83c-d76550c2848c.jpg?ci_seal=e6c5116ff8ad1cf5dfe8b36aceed03217aa0cda5&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.640 € Kaltmiete zzgl. NK",
         "location": "Lehel, München (80538)",
         "details": "3 Zimmer·85 m²",
-        "image": "https://mms.immowelt.de/8/6/9/2/8692c64d-063a-4a59-aa27-0c054fcede5f.jpg?ci_seal=c642f2cc8b2d80a246b7653294e9618d3925c6e5&w=384"
+        "image": "https://mms.immowelt.de/8/6/9/2/8692c64d-063a-4a59-aa27-0c054fcede5f.jpg?ci_seal=c642f2cc8b2d80a246b7653294e9618d3925c6e5&w=384",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.999 € /Monat Kaltmiete zzgl. NK",
         "location": "Thalkirchen, München (81379)",
         "details": "5 Zimmer·143 m²·frei ab 01.03.2025",
-        "image": "https://mms.immowelt.de/1/8/2/7/18277ec2-06c7-4b3f-9122-b5e20319e2eb.jpg?ci_seal=3f25a021351e0bf54e6457522ac70add621fe942&w=384"
+        "image": "https://mms.immowelt.de/1/8/2/7/18277ec2-06c7-4b3f-9122-b5e20319e2eb.jpg?ci_seal=3f25a021351e0bf54e6457522ac70add621fe942&w=384",
+        "agency": "ohne-makler.net - Immobilien selbst vermarkten"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.440 € /Monat Warmmiete",
         "location": "Gärtnerplatz, München (80469)",
         "details": "2 Zimmer·46 m²·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Kabis Immobilien"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.035 € Kaltmiete zzgl. NK",
         "location": "Rosa-Kempf-Straße 11, Freiham, München (81249)",
         "details": "3 Zimmer·87,9 m²·3. Geschoss·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Munich Future City West GmbH"
     },
     {
         "title": "Terrassenwohnung zur Miete",
         "price": "2.500 € Kaltmiete zzgl. NK",
         "location": "Rosa-Kempf-Straße 27, Freiham, München (81249)",
         "details": "4 Zimmer·114,1 m²·2. Geschoss·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Munich Future City West GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.680 € Kaltmiete zzgl. NK",
         "location": "Rosa-Kempf-Straße 17, Freiham, München (81249)",
         "details": "2 Zimmer·73,1 m²·4. Geschoss·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Munich Future City West GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.292 € Kaltmiete zzgl. NK",
         "location": "Großhadernerstraße 18, Neuhadern, München (81375)",
         "details": "2 Zimmer·68 m²·1. Geschoss",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": ""
     },
     {
         "title": "Studio zur Miete",
         "price": "950 € Kaltmiete zzgl. NK",
         "location": "Heimgartenstr. 21a, Obergiesing, München (81539)",
         "details": "1 Zimmer·32 m²·1. Geschoss",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": ""
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.345 € Kaltmiete zzgl. NK",
         "location": "Mallnitzer Straße 60, Am Westbad, München (80687)",
         "details": "4 Zimmer·120 m²·1. Geschoss·frei ab 01.05.2025",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Schwimmer -Immobilien"
     },
     {
         "title": "Loft zur Miete",
         "price": "890 € Kaltmiete zzgl. NK",
         "location": "Johannisplatz 11, Haidhausen - Nord, München (81667)",
         "details": "1 Zimmer·26 m²·EG·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": ""
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.165 € /Monat Warmmiete",
         "location": "Maistraße 10, Am alten südlichen Friedhof, München (80337)",
         "details": "4 Zimmer·17 m²·frei ab 10.02.2025",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "HOMELIKE INTERNET GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.150 € Kaltmiete zzgl. NK",
         "location": "Reitmorstraße 43a, Englischer Garten Süd, München (80538)",
         "details": "2 Zimmer·52 m²·1. Geschoss",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "FEM REAL ESTATE SERVICES"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.920 € Kaltmiete zzgl. NK",
         "location": "Brodersenstr. 13, Englschalking, München (81929)",
         "details": "3 Zimmer·92 m²·3. Geschoss·frei ab 01.03.2025",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "ZH GMBH & CO. OBJEKT BARLOWSTRASSE KG"
     },
     {
         "title": "Studio zur Miete",
         "price": "1.985 € Warmmiete",
         "location": "Knöbelstr. 12a, Lehel, München (80538)",
         "details": "2 Zimmer·56 m²·EG",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": ""
     },
     {
         "title": "Studio zur Miete",
         "price": "3.565 € /Monat Warmmiete",
         "location": "Carl-Wery-Str. 35, Neuperlach, München (81739)",
         "details": "2 Zimmer·60 m²",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Revo München GmbH CISBOX ID 172243"
     },
     {
         "title": "Studio zur Miete",
         "price": "1.860 € /Monat Warmmiete",
         "location": "Carl-Wery-Straße 35, Neuperlach, München (81739)",
         "details": "1 Zimmer·21 m²",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Revo München GmbH CISBOX ID 172243"
     },
     {
         "title": "Studio zur Miete",
         "price": "3.995 € Kaltmiete zzgl. NK",
         "location": "Haidhausen - Süd, München (81667)",
         "details": "3 Zimmer·112,4 m²·3. Geschoss",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Victoria Living GmbH"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "2.850 € Kaltmiete zzgl. NK",
         "location": "Lehel, München (80538)",
         "details": "3 Zimmer·99 m²·5. Geschoss·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Dr jur. Heinz Schwerd Consulting"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "3.770 € Kaltmiete zzgl. NK",
         "location": "Haidhausen - Süd, München (81667)",
         "details": "4 Zimmer·150,8 m²·2. Geschoss·frei ab sofort",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "ERL Immobilien AG"
     },
     {
         "title": "Wohnung zur Miete",
         "price": "1.584 € Kaltmiete zzgl. NK",
         "location": "Neuperlach, München (81737)",
         "details": "2 Zimmer·52 m²·frei ab 01.04.2025",
-        "image": "Keine Fotos vorhanden"
+        "image": "Keine Fotos vorhanden",
+        "agency": "Mr. Lodge GmbH - Wohnen auf Zeit und Immobilienverkauf"
     }
 ]
