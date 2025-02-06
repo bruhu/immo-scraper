@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/immo-scraper/static/css/main.3fb4ffc3.css",
-    "main.js": "/immo-scraper/static/js/main.9ab08074.js",
+    "main.css": "/immo-scraper/static/css/main.c0883782.css",
+    "main.js": "/immo-scraper/static/js/main.63766a3a.js",
     "index.html": "/immo-scraper/index.html",
-    "main.3fb4ffc3.css.map": "/immo-scraper/static/css/main.3fb4ffc3.css.map",
-    "main.9ab08074.js.map": "/immo-scraper/static/js/main.9ab08074.js.map"
+    "main.c0883782.css.map": "/immo-scraper/static/css/main.c0883782.css.map",
+    "main.63766a3a.js.map": "/immo-scraper/static/js/main.63766a3a.js.map"
   },
   "entrypoints": [
-    "static/css/main.3fb4ffc3.css",
-    "static/js/main.9ab08074.js"
+    "static/css/main.c0883782.css",
+    "static/js/main.63766a3a.js"
   ]
 }
